@@ -1,0 +1,13 @@
+<template name="posts">
+    <h1>Liste des posts</h1>
+    {{#each posts}}
+        {{> post }}
+    {{/each}}
+    
+</template>
+
+<template name="post">
+    <div class="post">
+        <li><b>{{ title }}</b>, {{ content }} par <em>{{ author }}</em></li>
+    </div>
+</template>

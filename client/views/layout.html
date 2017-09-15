@@ -1,0 +1,24 @@
+<head>
+  <title>myapp</title>
+</head>
+
+
+<template name="mainLayout">
+    <div>
+    	<ul>
+    		<li><a href="{{ pathFor route ='accueil' }}">Accueil</a></li>
+    		<li><a href="{{ pathFor route ='posts' }}">Posts</a></li>
+            {{#if currentUser}}
+                <li><button class="logout">Se déconnecter</button></li>
+            {{else}}
+                <li><a href="{{pathFor route='login'}}">Se connecter</a></li>
+            {{/if}}
+            <li>
+                {{> loginButtons}}
+            </li>
+    	</ul>
+    </div>
+    <div>
+        {{> yield}}
+    </div>
+</template>
