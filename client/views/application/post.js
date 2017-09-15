@@ -3,3 +3,9 @@ Template.post.events({
 		alert('Vous avez cliqué');
 	}
 });
+
+Template.post.rendered = function(){
+	$(document).ready(function(){
+    	$('.collapsible').collapsible();
+  	});
+}

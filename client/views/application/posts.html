@@ -1,13 +1,18 @@
 <template name="posts">
     <h1>Liste des posts</h1>
+    
     {{#each posts}}
         {{> post }}
     {{/each}}
+   	
     
 </template>
 
 <template name="post">
-    <div class="post">
-        <li><b>{{ title }}</b>, {{ content }} par <em>{{ author }}</em></li>
-    </div>
+	<ul class="collapsible" data-collapsible="accordion">
+	    <li>
+	      	<div class="collapsible-header white-text z-depth-5 red lighten-3"><i class="material-icons"></i>{{ title }}</div>
+	      	<div class="collapsible-body"><span>{{ content }} posté par <em>{{ author }}</em></span></div>
+	    </li>
+  	</ul>
 </template>
